@@ -17,6 +17,7 @@ export class MainComponent implements OnInit {
       (images) => {
         this.images = images
         console.log(this.images);
+        console.log("hello");
       },
       (error) => {
         console.log(error)
