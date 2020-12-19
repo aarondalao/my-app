@@ -1,4 +1,6 @@
+import { UnsplashService } from './../unsplash.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-main',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  images: any;
+
+  constructor(private unsplashService: UnsplashService) {
+    
+
+   }
+
+  ngOnInit() {
+
+    this.unsplashService.getImages().subscribe(
+      (images) => {
+        this.images = images;
+        console.log(this.images);
+      },
+      (error) => {
+        console.log(error);
+      }
+    )
   }
 
 }

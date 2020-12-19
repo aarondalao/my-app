@@ -1,5 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
+import { UnsplashService } from './unsplash.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 
 
 import { AppComponent } from './app.component';
@@ -17,9 +20,14 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    UnsplashService,
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [
+    UnsplashService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
