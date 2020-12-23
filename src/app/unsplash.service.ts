@@ -12,6 +12,6 @@ export class UnsplashService {
   }
 
   getImages<T>(): Observable<T> {
-    return this.http.get<T>("https://api.unsplash.com./photos/random?client_id=VXkHG_MWKtCwXuf1Bvl-m6Vh8bZ5QCo-SZ6XQzClgiA&count=50");
+    return this.http.get<T>("https://api.unsplash.com./photos/random?client_id=VXkHG_MWKtCwXuf1Bvl-m6Vh8bZ5QCo-SZ6XQzClgiA&count=30");
   }
 }
