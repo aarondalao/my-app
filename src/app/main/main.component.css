@@ -1,18 +1,18 @@
-.pic-container{
-    align-self: center;
-}
 .THE_IMAGE{
     display: flex;
-    margin: auto;
-    
-}
+    margin: 8px 8px;
+    object-fit: fill;
+} 
+
 .lead{
     text-align: justify;
 }
 .card{
-    width: ;
+    /* width: ; */
     max-width: 100%;
     height: auto;
+    
+    /* padding-bottom: 10px; */
     /* margin: auto; */
 }
 .main{
@@ -22,6 +22,8 @@
 }
 .col{
     width: 100%;
+    
+    padding-bottom: 10px;
     flex: 0 0 auto;
 }
 .row{
@@ -31,65 +33,60 @@
     margin-top: var(--bs-gutter-y);
 }
 
+/* main {
+    filter:invert(20%);
+} */
+
+
 
 /* mobile devices */
 @media screen and (max-width: 480px){
-    .card{
-        
-    }
-    .card-body{
-       
-    }
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 55%;
+        max-height: 55%;
     }
+    .modal-xl{
+        max-width: 50%  !important;
+    }
+
 }
 
 /* iPads, Tablets */
 @media screen and (min-width: 481px) and  (max-width: 768px){
-    .card{
-        
-    }
-    .card-body{
-    
-    }
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 65%;
+        max-height: 65%;
+    }
+    .modal-xl{
+        max-width: 60%  !important;
     }
 }
 
 
 /* Small screens, laptops */
 @media screen and (min-width: 769px) and (max-width: 1024px){
-    .card{
-        
-    }
-    .card-body{
-    }
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 75%;
+        max-height: 75%;
+    }
+    .modal-xl{
+        max-width: 70%  !important;
     }
 }
 
 
 /* Desktops, large screens */
 @media screen and (min-width: 1025px) and (max-width: 1200px){
-    .card{
-        
-    }
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 85%;
+        max-height: 85%;
     }
-    .card-body{
-        
+    .modal-xl{
+        max-width: 80%  !important;
     }
 }
 
@@ -98,13 +95,12 @@
 @media screen and (min-width: 1201px){
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 95%;
+        /* max-height: 95%; */
     }
-    .card{
-        
-    }
-    .card-body{
-       
+
+    .modal-dialog{
+        max-width: 93%  !important;
+        height:  50% !important;
     }
 }

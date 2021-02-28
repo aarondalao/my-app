@@ -9,13 +9,15 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { UnsplashService } from './unsplash.service';
+import { EnlargePhotoComponent } from './enlarge-photo/enlarge-photo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    EnlargePhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import { UnsplashService } from './unsplash.service';
     HttpClientModule
   ],
   providers: [
-    UnsplashService
+    UnsplashService, {provide: 'photoID', useValue: 'myImage'}
   ],
   bootstrap: [AppComponent]
 })

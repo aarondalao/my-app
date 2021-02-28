@@ -5,19 +5,16 @@
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light">Album example</h1>
+      <h1 class="fw-light">Album example using Unsplash API</h1>
       <p class="lead text-muted">
         Tilde keffiyeh whatever hot chicken subway tile id mlkshk church-key
         single-origin coffee est health goth williamsburg venmo cred. Unicorn
-        gentrify vexillologist eu. Squid franzen blue bottle kale chips freegan,
-        iPhone chillwave occupy tousled. Tempor shoreditch enamel pin fugiat
-        YOLO irony. Listicle chambray proident aliquip keytar YOLO est
-        lumbersexual laborum slow-carb 90's photo booth vexillologist unicorn.
-        Chicharrones elit intelligentsia banjo quinoa green juice pok pok ramps
-        tofu meh.
+        gentrify vexillologist eu.
       </p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-primary my-2">
+          Click me to invert colors!
+        </a>
         <a href="#" class="btn btn-secondary my-2">Secondary action</a>
       </p>
     </div>
@@ -36,13 +33,21 @@
                                 |
                                 V
                 -->
-                <img
-                  class="THE_IMAGE"
-                  src="{{ image.urls.small }}"
-                  alt="random photos from unsplash"
-                  width="100%"
-                  height="225"
-                />
+                <a
+                  class="myCustomLink"
+                  href=""
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  (click)="viewPhoto(image.id)"
+                >
+                  <img
+                    class="THE_IMAGE"
+                    src="{{ image.urls.thumb }}"
+                    alt="random photos from unsplash"
+                    width="100%"
+                    height="225"
+                  />
+                </a>
               </picture>
               <div class="card-body">
                 <p class="card-text">{{ image.alt_description }}</p>
@@ -51,17 +56,14 @@
                     <button
                       type="button"
                       class="btn btn-sm btn-outline-secondary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      (click)="viewPhoto(image.id)"
                     >
-                      View
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      Edit
+                      view photo
                     </button>
                   </div>
-                  <small class="text-muted">9 mins</small>
+                  <!--<small class="text-muted">9 mins</small>-->
                 </div>
               </div>
             </div>
@@ -71,3 +73,35 @@
     </div>
   </div>
 </main>
+<!--Modal-->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ ModalTitle }}</h5>
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeClick()"
+        >
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-enlarge-photo [myImage]="myImage" *ngIf="ActivateViewPhoto">
+        </app-enlarge-photo>
+        <!-- <app-enlarge-photo [img] = "img" *ngIf="ActivateViewPhoto"> </app-enlarge-photo> -->
+      </div>
+    </div>
+  </div>
+</div>

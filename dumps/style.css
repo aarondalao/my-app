@@ -1,0 +1,100 @@
+/* main */
+.container{
+    display: grid;
+    max-width: 100%;
+    max-height: 85%;
+
+    grid-template-columns: 1fr 1fr 25%;
+    grid-template-rows: 1fr 25%;
+    column-gap: 10px;
+    row-gap: 10px;
+    
+
+    /* guide */
+    border: 2px solid black;    
+}
+
+
+/* hero photo */
+
+.hero_photo_container{
+    grid-area: heroPhoto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    /* guide */
+    border: 2px solid red;
+}
+.hero_photo{
+
+
+     /* guide */
+     border: 2px solid blue;
+}
+.enlargedImage{
+    width:50%;  
+}
+
+/* user settings */
+.user_details_camera_settings_location_container{
+    grid-area: userAndLocationSettings;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+     /* guide */
+     border: 5px solid violet;
+}
+.thumb_photos_container{
+    /* grid-area: thumbContainer; */
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    /* guide */
+    border: 2px solid green;
+}
+
+
+
+
+/* media screen adjustments below here ! */
+/*           |                          */
+/*           |                         */
+/*           |                        */
+/*           V                       */
+
+
+
+/* mobile devices */
+@media screen and (max-width: 480px){
+
+}
+
+/* iPads, Tablets */
+@media screen and (min-width: 481px) and  (max-width: 768px){
+    
+}
+
+/* Small screens, laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    
+}
+
+/* Desktops, large screens */
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    
+}
+
+/* Extra large screens, TV */
+@media screen and (min-width: 1201px){
+    
+}
