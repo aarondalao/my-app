@@ -65,15 +65,15 @@
                     <svg width="16" height="16" class="_1Jlgk" version="1.1" viewBox="0 0 32 32" aria-labelledby="unsplash-home" aria-hidden="false">
                       <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
                     </svg>
-                    &nbsp;{{ myImage.user.name }}'s Unsplash profile 
+                    &nbsp;{{ myImage.user.name }}'s Unsplash 
                   </a>
                 </label>
               </div>
 
-              <div class="portfolio link">
+              <div class="portfolio_link">
                   <label class="link_typography" for="">
                     <a  href="{{myImage.user.portfolio_url}}" target="_blank" rel="noreferrer noopener">
-                      &nbsp;{{ myImage.user.name }}'s Portfolio profile 
+                      &nbsp;{{ myImage.user.name }}'s Portfolio App 
                     </a>
                   </label>
                 </div>
@@ -107,8 +107,10 @@
                 <label for="" class ="typography_settings">ISO: {{ myImage.exif.iso }}</label>
               </div>
             </div>
+            <hr class="separate">
           </div>
         </div>
+        
         <div class="camera_location_settings_container">
           <div class="spacing">
             <div class="camera_location_settings">
@@ -126,9 +128,6 @@
             </div>
           </div>
         </div>
-
-
-        
       </div>
       
       <!--  <div class="thumb_photos_container"> -->

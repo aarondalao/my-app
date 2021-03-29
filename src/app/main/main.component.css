@@ -43,11 +43,13 @@
 @media screen and (max-width: 480px){
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 55%;
-        max-height: 55%;
+        
+        margin-left: auto;
+        margin-right: auto;
     }
     .modal-xl{
-        max-width: 50%  !important;
+        max-width: 95%  !important;
+        
     }
 
 }
@@ -56,11 +58,12 @@
 @media screen and (min-width: 481px) and  (max-width: 768px){
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 65%;
-        max-height: 65%;
+        
+        margin-left: auto;
+        margin-right: auto;
     }
     .modal-xl{
-        max-width: 60%  !important;
+        max-width: 93%  !important;
     }
 }
 
@@ -69,11 +72,12 @@
 @media screen and (min-width: 769px) and (max-width: 1024px){
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 75%;
-        max-height: 75%;
+        
+        margin-left: auto;
+        margin-right: auto;
     }
     .modal-xl{
-        max-width: 70%  !important;
+        max-width: 93%  !important;
     }
 }
 
@@ -82,11 +86,10 @@
 @media screen and (min-width: 1025px) and (max-width: 1200px){
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 85%;
-        max-height: 85%;
+        
     }
     .modal-xl{
-        max-width: 80%  !important;
+        max-width: 93%  !important;
     }
 }
 
@@ -95,8 +98,7 @@
 @media screen and (min-width: 1201px){
     .THE_IMAGE{
         object-fit: cover;
-        max-width: 95%;
-        /* max-height: 95%; */
+        
     }
 
     .modal-dialog{

@@ -12,7 +12,7 @@ export class UnsplashService {
   // variables
   readonly APIurl = 'https://api.unsplash.com./photos/';
   readonly myClientID = 'client_id=VXkHG_MWKtCwXuf1Bvl-m6Vh8bZ5QCo-SZ6XQzClgiA';
-  readonly myCount = 'count=10';
+  readonly myCount = 'count=12';
 
   //, @Inject('photoID') private photoID: string
   constructor(private http: HttpClient
