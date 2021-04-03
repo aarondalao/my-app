@@ -1,68 +1,32 @@
 /* main */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 25%;
-  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
 
-  /* box-shadow: 0px 0px 20px 5px #bcbcbc; */
-
-  margin: 10px;
-
-  /* guide only
-    border: 1px solid blueviolet; */
 }
 
 /* hero photo */
-
 .hero_photo_container {
   grid-area: heroPhoto;
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end : 2;
 
-  grid-row-start: 1;
-  grid-row-end: 3;
-
-  /* get rid of this and use vw  */
-  /* max-width: 100%;
-    max-height: 85%; */
-
-  /* background-color: #212529; */
-
-  /* guide only
-    border: 5px solid darkkhaki; */
-}
-
-.labelForZoom {
-}
-.hero_photo {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* border: 3px solid darkkhaki; */
 }
-.enlargedImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
 
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
 
-  /* border: 1px solid darkkhaki;   */
-}
 
 /* zoomed when clicked */
 input[type="checkbox"] {
   display: none;
 }
 
-.hero_photo img {
+.hero_photo_container img {
   transition: transform 0.5s ease;
   cursor: zoom-in;
+  
 
   /* -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -75,6 +39,10 @@ input[type="checkbox"]:checked ~ label > img {
   margin: 200px;
   box-shadow: 0px 0px 20px 100% #000000;
   cursor: zoom-out;
+  
+}
+input[type="checkbox"]:checked ~ div > img {
+  backdrop-filter: blur(20px);
 }
 
 .hero_photo_caption {
@@ -85,60 +53,20 @@ input[type="checkbox"]:checked ~ label > img {
 }
 
 .separate {
-  border-top: 1px solid #f8f9fa;
+
 }
 
 /* user settings */
 
 .user_details_camera_settings_location_container {
   grid-area: userAndLocationSettings;
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
 
-  grid-row-start: 1;
-  grid-row-end: 3;
   background-color: #808080;
 
-  /* guide only
-    border: 1px solid gold; */
-}
 
-.user_name {
-  font-size: x-large;
 }
-
-.links {
-  display: block;
-}
-
-.instagram {
-  display: inline-block;
-  margin: 0.5vw;
-}
-
-.photo_link {
-  display: inline-block;
-  margin: 0.5vw;
-}
-.user_link {
-  display: inline-block;
-  margin: 0.5vw;
-}
-
-/*
-.thumb_photos_container{
-    grid-area: thumbContainer;
-
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    background-color: #808080;
-
-     guide only
-    border: 1px solid  darkgreen; 
-}
-*/
 
 /* text */
 .hero_photo_label,
@@ -179,7 +107,6 @@ a:active {
   .container {
     max-width: 80vw;
     display: block !important;
-    
   }
   .user_details_camera_settings_location_container {
     display: block !important;
@@ -194,54 +121,38 @@ a:active {
   .user_settings {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
-
     display: inline !important;
-    /* guide only */
-    /* border: 2px solid red; */
+
   }
   .camera_location_settings {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
 
     display: inline !important;
-    /* guide only */
-    /* border: 2px solid blue; */
-  }
-
-  .user_name {
-    font-size: 5vw;
   }
 
   .links {
   }
 
   .instagram {
-    margin: 1%;
+    margin: 1vw;
   }
 
   .photo_link {
-    margin: 1%;
+    margin: 1vw;
   }
   .user_link {
-    margin: 1%;
+    margin: 1vw;
   }
   .portfolio_link{
-    margin: 1%;
+    margin: 1vw;
   }
-
 
   /* HERO PHOTO CONTAINER AND THE ACTUAL HERO PHOTO */
 
-  .hero_photo {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #enlargedImage {
+    max-width: 80%;
     
-  }
-  .enlargedImage {
-    max-width: 100%;
-    max-height: 800px;
     /* display: block;
     margin-left: auto;
     margin-right: auto; */
@@ -249,22 +160,20 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-
-   
   }
 
   /* text */
   .hero_photo_label,
   .typography_settings {
-    font-size: 2vw;
+    font-size: 4vw;
   }
   .link_typography {
-    font-size: 2vw;
+    font-size: 4vw;
+  }
+  .user_name {
+    font-size: 7vw;
   }
 
-
-
-  
 /* zoomed when clicked */
 input[type="checkbox"] {
     display: none !important;
@@ -288,6 +197,8 @@ input[type="checkbox"] {
     cursor:initial !important;
   }
 }
+
+
 
 /* iPads, Tablets */
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -313,7 +224,7 @@ input[type="checkbox"] {
 
     display: inline !important;
     /* guide only */
-    /* border: 2px solid red; */
+
   }
   .camera_location_settings {
     padding-top: 0.8vw;
@@ -321,11 +232,7 @@ input[type="checkbox"] {
 
     display: inline !important;
     /* guide only */
-    /* border: 2px solid blue; */
-  }
 
-  .user_name {
-    font-size: 5vw;
   }
 
   .links {
@@ -346,40 +253,22 @@ input[type="checkbox"] {
   }
 
   /* HERO PHOTO CONTAINER AND THE ACTUAL HERO PHOTO */
-
-  .hero_photo {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
-  }
-  .enlargedImage {
-    max-width: 100%;
-    max-height: 800px;
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    
+  
+  #enlargedImage {
+    max-width: 80%;
   }
 
   /* text */
   .hero_photo_label,
   .typography_settings {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .link_typography {
-    font-size: 2vw;
+    font-size: 3vw;
   }
-
-
-
+  .user_name {
+    font-size: 5vw;
+  }
   
 /* zoomed when clicked */
 input[type="checkbox"] {
@@ -389,11 +278,7 @@ input[type="checkbox"] {
   .hero_photo img {
     transition: none !important;
     cursor:initial !important;
-  
-    /* -moz-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      -webkit-transition: all 1s ease;
-      -o-transition: all 1s ease; */
+
   }
   
   input[type="checkbox"]:checked ~ label > img {
@@ -405,11 +290,13 @@ input[type="checkbox"] {
   }
 }
 
+
+
 /* Small screens, laptops */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /* PARENT CONTAINERS */
   .container {
-    max-width: 100vw;
+    max-width: 85vw;
   }
   .user_details_camera_settings_location_container {
     max-width: inherit;
@@ -425,18 +312,16 @@ input[type="checkbox"] {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     /* guide only */
-    /* border: 2px solid red; */
+
   }
   .camera_location_settings {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     /* guide only */
-    /* border: 2px solid blue; */
+
   }
 
-  .user_name {
-    font-size: 3vw;
-  }
+  
 
   .links {
   }
@@ -455,37 +340,20 @@ input[type="checkbox"] {
   }
 
   /* HERO PHOTO CONTAINER AND THE ACTUAL HERO PHOTO */
-
-  .hero_photo {
-    max-width: 100%;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .enlargedImage {
-    max-width: 100%;
-    max-height: 800px;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
+  #enlargedImage {
+    max-width: 80%;
   }
 
   /* text */
   .hero_photo_label,
   .typography_settings {
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
   .link_typography {
-    font-size: 1vw;
+    font-size: 1.5vw;
+  }
+  .user_name {
+    font-size: 3.5vw;
   }
 }
 
@@ -493,7 +361,7 @@ input[type="checkbox"] {
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   /* PARENT CONTAINERS */
   .container {
-    max-width: 100vw;
+    max-width: 85vw;
   }
   .user_details_camera_settings_location_container {
     max-width: inherit;
@@ -509,13 +377,13 @@ input[type="checkbox"] {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     /* guide only */
-    /* border: 2px solid red; */
+
   }
   .camera_location_settings {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     /* guide only */
-    /* border: 2px solid blue; */
+
   }
 
   .user_name {
@@ -541,30 +409,28 @@ input[type="checkbox"] {
 
 
   /* HERO PHOTO CONTAINER AND THE ACTUAL HERO PHOTO */
-
-  .hero_photo {
-    max-width: 100%;
-  }
-  .enlargedImage {
-    max-width: 100%;
-    max-height: 800px;
+  #enlargedImage {
+    max-width: 80%;
   }
 
-  /* text */
-  .hero_photo_label,
-  .typography_settings {
-    font-size: 0.9vw;
-  }
-  .link_typography {
-    font-size: 0.8vw;
-  }
+   /* text */
+   .hero_photo_label,
+   .typography_settings {
+     font-size: 1.2vw;
+   }
+   .link_typography {
+     font-size: 1.2vw;
+   }
+   .user_name {
+     font-size: 2.8vw;
+   }
 }
 
 /* Extra large screens, TV */
 @media screen and (min-width: 1201px) and (max-width: 2559px) {
   /* PARENT CONTAINERS */
   .container {
-    max-width: 100vw;
+    max-width: 85vw;
   }
   .user_details_camera_settings_location_container {
     max-width: inherit;
@@ -580,13 +446,13 @@ input[type="checkbox"] {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     /* guide only */
-    /* border: 2px solid red; */
+
   }
   .camera_location_settings {
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     /* guide only */
-    /* border: 2px solid blue; */
+
   }
 
   .user_name {
@@ -612,13 +478,9 @@ input[type="checkbox"] {
 
 
   /* HERO PHOTO CONTAINER AND THE ACTUAL HERO PHOTO */
-
-  .hero_photo {
-    max-width: 100%;
-  }
-  .enlargedImage {
-    max-width: 100%;
-    max-height: 800px;
+  #enlargedImage {
+    max-width: 80%;
+    
   }
 
   /* text */
@@ -635,7 +497,7 @@ input[type="checkbox"] {
 @media screen and (min-width: 2560px) {
   /* PARENT CONTAINERS */
   .container {
-    max-width: 150vw;
+    max-width: 120vw;
   }
   .user_details_camera_settings_location_container {
     max-width: inherit;
@@ -651,13 +513,13 @@ input[type="checkbox"] {
     padding-top: 1.3vw;
     padding-bottom: 1.3vw;
     /* guide only */
-    /* border: 2px solid red; */
+
   }
   .camera_location_settings {
     padding-top: 1.3vw;
     padding-bottom: 1.3vw;
     /* guide only */
-    /* border: 2px solid blue; */
+
   }
 
   .user_name {
@@ -680,12 +542,9 @@ input[type="checkbox"] {
 
   /* HERO PHOTO CONTAINER AND THE ACTUAL HERO PHOTO */
 
-  .hero_photo {
-    max-width: 100%;
-  }
-  .enlargedImage {
-    max-width: 100%;
-    max-height: 1500px;
+  
+  #enlargedImage {  
+    max-width: 80%;
   }
 
   /* text */

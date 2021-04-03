@@ -20,10 +20,11 @@ export class EnlargePhotoComponent implements OnInit {
     this.unsplashService.getThatOnePhoto().subscribe(
       (image) => {
         this.myImage = image;
-      },
-      (error) => {
-        console.log(error);
       });
+      // ,
+      // (error) => {
+      //   console.log(error);
+      // }
     console.log(this.myImage);
   }
 }

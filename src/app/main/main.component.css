@@ -1,6 +1,6 @@
 .THE_IMAGE{
     display: flex;
-    margin: 8px 8px;
+    margin: auto;
     object-fit: fill;
 } 
 
@@ -103,6 +103,6 @@
 
     .modal-dialog{
         max-width: 93%  !important;
-        height:  50% !important;
+        
     }
 }

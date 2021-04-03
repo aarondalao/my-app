@@ -10,11 +10,10 @@ import { Observable, throwError } from 'rxjs';
 export class UnsplashService {
 
   // variables
-  readonly APIurl = 'https://api.unsplash.com./photos/';
+  readonly APIurl = 'https://api.unsplash.com/photos/';
   readonly myClientID = 'client_id=VXkHG_MWKtCwXuf1Bvl-m6Vh8bZ5QCo-SZ6XQzClgiA';
-  readonly myCount = 'count=12';
+  readonly myCount = 'count=30';
 
-  //, @Inject('photoID') private photoID: string
   constructor(private http: HttpClient
               // @Inject('photoID') private photoID: string
               ){
