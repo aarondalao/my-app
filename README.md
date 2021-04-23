@@ -1,6 +1,7 @@
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+This is a mere basic project where i use unsplash api to display random photos and their data linking to the unsplash.com and instagram.com
 
 ## Development server
 
